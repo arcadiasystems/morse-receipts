@@ -1,0 +1,8 @@
+/* Morse Receipts: the Paper palette. The first line is the token contract of
+   base.css; the rest are this site's own. Paper is what the reader holds,
+   glass is the machinery under it, and colour is a verdict. */
+:root{--bg:#09090A;--bg-rgb:9,9,10;--panel-rgb:15,15,17;--dim:#BDBBB6;--mute:#93918C;--acc:#F6F2E7;--acc-rgb:246,242,231;--lift:#CFC9BA;--lift-rgb:207,201,186;--tint-rgb:255,255,255;--em:var(--acc);--on-acc:#09090A;--ok:#6FD3A6;--warn:#F0C96A;
+  /* verdicts on the dark field, and the two sibling names in "Who it's for" */
+  --bad:#FF6B5E;--press:#FF5A36;--agents:#C6F135;
+  /* paper, and the same verdicts darkened to pass 4.5:1 on it */
+  --paper:#F6F2E7;--ink:#121418;--pmute:#5C5F66;--pline:rgba(18,20,24,.2);--p-ok:#0B7A4A;--p-warn:#8A5B00;--p-bad:#C02A1C}
