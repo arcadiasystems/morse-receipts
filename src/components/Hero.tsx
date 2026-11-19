@@ -119,6 +119,32 @@ function PathStrip() {
   )
 }
 
+/** The hero object: the receipt feeding out of its slot, over the path strip. Also drawn on the share image (og/main.tsx). */
+export function ReceiptStage() {
+  return (
+    <div
+      className="stage"
+      role="group"
+      aria-label="A sample receipt: three checks passed, read from Sui and Walrus, with Morse's servers not in the path"
+    >
+      <div className="unit">
+        <div className="slot">
+          <span>
+            <i aria-hidden="true" />
+            CHECKED IN YOUR BROWSER
+          </span>
+          <span>SUI · WALRUS</span>
+        </div>
+        {/* The torn edge is a mask, which would clip a shadow on the paper, so the glow and shadow sit on .feed. */}
+        <div className="feed">
+          <Receipt />
+        </div>
+      </div>
+      <PathStrip />
+    </div>
+  )
+}
+
 export function Hero() {
   return (
     <section className="hero" id="top">
@@ -157,26 +183,7 @@ export function Hero() {
             already has one.
           </p>
         </div>
-        <div
-          className="stage"
-          role="group"
-          aria-label="A sample receipt: three checks passed, read from Sui and Walrus, with Morse's servers not in the path"
-        >
-          <div className="unit">
-            <div className="slot">
-              <span>
-                <i aria-hidden="true" />
-                CHECKED IN YOUR BROWSER
-              </span>
-              <span>SUI · WALRUS</span>
-            </div>
-            {/* The torn edge is a mask, which would clip a shadow on the paper, so the glow and shadow sit on .feed. */}
-            <div className="feed">
-              <Receipt />
-            </div>
-          </div>
-          <PathStrip />
-        </div>
+        <ReceiptStage />
       </div>
     </section>
   )

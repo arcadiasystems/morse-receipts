@@ -32,6 +32,8 @@ npm install
 npm run dev      # vite dev server, every route prerendered on request
 npm run build    # tsc + production build, prerendered to static HTML in dist/
 npm run lint     # eslint
+npm run og       # redraw public/og.png, the share image, from og/ (needs Playwright's Chromium)
+npm run icons    # redraw the icon files in public/ from favicon.svg and og/icon-full.svg
 ```
 
 Stack: Vite + React 19 + TypeScript (strict), plain CSS, no runtime dependency
@@ -49,6 +51,8 @@ beyond React. Same toolchain as `arcadiasystems/morse-landing`.
 | `src/receipt/` | The two light receipt routes and their own stylesheet, `receipt.css` |
 | `src/lib/links.ts` | Every URL the site links to |
 | `vite.config.ts` | The build, and the plugin that prerenders each page |
+| `og/` | The share image as a page (`og.html`, `Card.tsx`, `card.css`: identical in the three sites; `main.tsx` and `object.css`: this site's content and hero object) and `icon-full.svg`, the full-bleed icon source. Not a build input |
+| `scripts/` | `og.mjs` and `icons.mjs` draw `public/og.png` and the icon files with Playwright; `png.mjs` re-compresses what they write. Run by hand, never by the build or CI. Identical in the three sites |
 
 `src/styles/base.css` and `src/base/` are written here and copied verbatim
 into morse-agents and morse-press. Change them here, then copy them again, so

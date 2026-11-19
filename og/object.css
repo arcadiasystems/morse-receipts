@@ -1,0 +1,10 @@
+/* Morse Receipts: the hero's receipt on the share image, fed out with its
+   three checks ticked. It runs off the lower edge, and carries the hero's
+   "Sample" pill beside its head, so it reads as the object and not as the
+   record of one post. The pill sits inside the square centre crop. */
+
+.og .glow{opacity:.1}
+.og .stage{position:absolute;left:74px;top:122px;width:380px;height:668px;transform:scale(1.12);transform-origin:50% 0}
+.og .unit{right:auto;left:0;margin-right:0}
+.og .path{display:none}
+.og__sample{position:absolute;right:478px;top:203px;font-size:15px;padding:7px 13px}
